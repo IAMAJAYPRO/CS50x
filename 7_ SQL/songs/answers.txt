@@ -1,0 +1,3 @@
+I would characterize their aura based on the averages of their song energies, loudness, speechiness, etc., and the characteristics of the music they listen to. Based on the songs.db, it's visible that they have listened to high-energy songs, so they have an orange aura.
+
+The way I calculated the aura might not be representative, as the dataset doesn't include how often the song was played. It would be better to include how often a particular song was played, as it could tell more about mood.
