@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: Time complexity found to be O(n*n) but it short-circuits on sorted arrays
+
+sort2 uses: merge sort
+
+How do you know?: When the input size increases by 10 times, the computation time only increases by about 5 times. For the other algorithms, it should have increased by 100 times.
+
+sort3 uses: selection sort
+
+How do you know?: Time complexity found to be O(n*n) but it doesn't short-circuits when encounter an already sorted array
