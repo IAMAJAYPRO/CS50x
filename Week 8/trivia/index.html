@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const textBtn = document.getElementById("btn-text")
+            const textAns = document.getElementById("answer-text")
+            const textQst = document.getElementById("text-qst")
+            textBtn.onclick = () => {
+                console.log(textAns.value)
+                if ((0.98 < parseInt(textAns.value) / 4056) && (parseInt(textAns.value) / 4056 < 1.02)) {
+                    textBtn.style.backgroundColor = "green"
+                    textQst.classList.remove("incorrect");
+                    textQst.classList.add("correct");
+                } else {
+                    textBtn.style.backgroundColor = "red"
+                    textQst.classList.remove("correct");
+                    textQst.classList.add("incorrect");
+                }
+            }
+
+            const optbtns = document.querySelectorAll(".opt-btn")
+            const optQst = document.getElementById("opt-qst")
+            optbtns.forEach((btn, index) => {
+                btn.onclick = () => {
+                    const re = /11/i
+                    if (re.test(btn.innerText)) {
+                        btn.style.backgroundColor = "green"
+                        optQst.classList.remove("incorrect");
+                        optQst.classList.add("correct");
+                    }
+                    else {
+                        btn.style.backgroundColor = "red"
+                        optQst.classList.remove("correct");
+                        optQst.classList.add("incorrect");
+                    }
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <h3 id="opt-qst">What number was the Apollo mission that successfully put a man on the moon for the first
+                time in human
+                history? </h3>
+            <button class="opt-btn">Apollo 9</button>
+            <button class="opt-btn">Apollo 11</button>
+            <button class="opt-btn">Apollo 12</button>
+            <button class="opt-btn">Apollo 13</button>
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3 id="text-qst">How long is India-China border?</h3>
+            <input type="text" name="" id="answer-text">
+            <button id="btn-text">Check Answer</button>
+        </div>
+    </div>
+</body>
+
+</html>
